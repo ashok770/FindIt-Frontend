@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
-import "./Navbar.css"; // ✅ make sure this is here
+import { NavLink, useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -12,15 +12,29 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {" "}
-        {/* 🔥 THIS WAS MISSING */}
-        <h2 className="logo">🔍 FindIt</h2>
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/lost">Report Lost</Link>
-          <Link to="/found">Report Found</Link>
-          <Link to="/matches">Matches</Link>
+        {/* LEFT */}
+        <div className="nav-left">
+          <h2 className="logo">🔍 FindIt</h2>
+        </div>
 
+        {/* CENTER */}
+        <div className="nav-center">
+          <NavLink to="/" className="nav-link">
+            Home
+          </NavLink>
+          <NavLink to="/lost" className="nav-link">
+            Report Lost
+          </NavLink>
+          <NavLink to="/found" className="nav-link">
+            Report Found
+          </NavLink>
+          <NavLink to="/matches" className="nav-link">
+            Matches
+          </NavLink>
+        </div>
+
+        {/* RIGHT */}
+        <div className="nav-right">
           <button className="logout-btn" onClick={logout}>
             Logout
           </button>
