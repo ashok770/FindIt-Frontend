@@ -95,3 +95,42 @@ a {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.1);
 }
+/* FORM PAGE */
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-card {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.form-card h2 {
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+/* BUTTONS */
+.form-card button {
+  margin-top: 10px;
+}
