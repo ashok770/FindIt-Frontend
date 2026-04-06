@@ -1,20 +1,29 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   return (
-    <div>
-      <h1>FindIt Dashboard</h1>
+    <div className="dashboard">
+      <h1 className="title">🔍 FindIt</h1>
+      <p className="subtitle">Smart & Secure Lost-and-Found System</p>
 
-      <Link to="/login">Login</Link>
-      <br />
-      <Link to="/register">Register</Link>
+      <div className="card-container">
+        <div className="action-card" onClick={() => navigate("/lost")}>
+          <h3>📤 Report Lost</h3>
+          <p>Lost something? Report it here</p>
+        </div>
 
-      <br />
-      <br />
+        <div className="action-card" onClick={() => navigate("/found")}>
+          <h3>📥 Report Found</h3>
+          <p>Found an item? Help return it</p>
+        </div>
 
-      <button>Report Lost Item</button>
-      <button>Report Found Item</button>
-      <button>View Matches</button>
+        <div className="action-card" onClick={() => navigate("/matches")}>
+          <h3>🤖 View Matches</h3>
+          <p>See smart matching results</p>
+        </div>
+      </div>
     </div>
   );
 }
