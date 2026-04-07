@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Lost from "./pages/Lost";
 import Found from "./pages/Found";
 import Matches from "./pages/Matches";
+import Verify from "./pages/Verify";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/lost" element={<Lost />} />
         <Route path="/found" element={<Found />} />
+        <Route path="/verify" element={<Verify />} />
         <Route path="/matches" element={<Matches />} />
       </Routes>
     </Router>
