@@ -134,3 +134,129 @@ textarea {
 .form-card button {
   margin-top: 10px;
 }
+/* PAGE */
+.lost-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* CONTAINER */
+.lost-container {
+  width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* FORM GRID */
+.lost-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* LEFT & RIGHT */
+.form-left,
+.form-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* TEXTAREA */
+textarea {
+  min-height: 100px;
+}
+
+/* SECRET BOX */
+.secret-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* QUESTION BLOCK */
+.question-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  grid-column: span 2;
+  margin-top: 10px;
+  background: #3b82f6;
+}
+
+.submit-btn:hover {
+  background: #2563eb;
+}
+/* PAGE */
+.matches-page {
+  padding: 40px;
+  text-align: center;
+}
+
+/* GRID */
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.match-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.match-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.match-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* SCORE */
+.score {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* BUTTON */
+.claim-btn {
+  margin-top: 10px;
+  background: #10b981;
+}
+
+.claim-btn:hover {
+  background: #059669;
+}
+.match-card {
+  position: relative;
+}
+
+/* SCORE BADGE */
+.score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #38bdf8;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}

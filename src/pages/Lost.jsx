@@ -46,54 +46,72 @@ function Lost() {
   };
 
   return (
-    <div className="form-container">
-      <div className="form-card">
+    <div className="lost-page">
+      <div className="lost-container">
         <h2>📤 Report Lost Item</h2>
 
-        <form onSubmit={handleSubmit}>
-          <input
-            name="itemName"
-            placeholder="Item Name"
-            onChange={handleChange}
-          />
-          <input name="brand" placeholder="Brand" onChange={handleChange} />
-          <input name="color" placeholder="Color" onChange={handleChange} />
-          <input
-            name="locationLost"
-            placeholder="Location Lost"
-            onChange={handleChange}
-          />
-          <input type="date" name="dateLost" onChange={handleChange} />
-          <textarea
-            name="description"
-            placeholder="Description"
-            onChange={handleChange}
-          />
+        <form onSubmit={handleSubmit} className="lost-form">
+          {/* LEFT SIDE */}
+          <div className="form-left">
+            <input
+              name="itemName"
+              placeholder="Item Name"
+              onChange={handleChange}
+            />
+            <input name="brand" placeholder="Brand" onChange={handleChange} />
+            <input name="color" placeholder="Color" onChange={handleChange} />
+            <input
+              name="locationLost"
+              placeholder="Location Lost"
+              onChange={handleChange}
+            />
+            <input type="date" name="dateLost" onChange={handleChange} />
+          </div>
 
-          <h3>🔐 Secret Questions</h3>
+          {/* RIGHT SIDE */}
+          <div className="form-right">
+            <textarea
+              name="description"
+              placeholder="Description"
+              onChange={handleChange}
+            />
 
-          {questions.map((q, index) => (
-            <div key={index}>
-              <input
-                placeholder="Question"
-                onChange={(e) =>
-                  handleQuestionChange(index, "question", e.target.value)
-                }
-              />
-              <input
-                placeholder="Answer"
-                onChange={(e) =>
-                  handleQuestionChange(index, "answer", e.target.value)
-                }
-              />
+            <input
+              name="image"
+              placeholder="Image URL (optional)"
+              onChange={handleChange}
+            />
+
+            <div className="secret-box">
+              <h3>🔐 Secret Questions</h3>
+
+              {questions.map((q, index) => (
+                <div key={index} className="question-block">
+                  <input
+                    placeholder="Question"
+                    onChange={(e) =>
+                      handleQuestionChange(index, "question", e.target.value)
+                    }
+                  />
+                  <input
+                    placeholder="Answer"
+                    onChange={(e) =>
+                      handleQuestionChange(index, "answer", e.target.value)
+                    }
+                  />
+                </div>
+              ))}
+
+              <button type="button" onClick={addQuestion}>
+                + Add Question
+              </button>
             </div>
-          ))}
+          </div>
 
-          <button type="button" onClick={addQuestion}>
-            + Add Question
+          {/* SUBMIT */}
+          <button type="submit" className="submit-btn">
+            Submit Report
           </button>
-
-          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
